@@ -1,65 +1,140 @@
-# Day 05 – Assignment
-## Conditional Statements and Loops in Python
+# Day 05 – Predict the Output
+## Python: Conditional Statements and Loops
 
-### Q1. Conditional Statements
+**Instructions:**
+- Predict the exact output of each program without running it.
+- Show the working or dry run for each question.
+- Pay attention to indentation, conditions, and the number of iterations.
 
-Write Python programs for the following:
+---
 
-1. Check whether a number is positive, negative, or zero.
-2. Check whether a number is even or odd.
-3. Accept a person's age and check whether they are eligible to vote.
-4. Accept marks and display a grade using `if-elif-else`.
-5. Find the greater of two numbers.
-6. Find the greatest of three numbers.
-7. Check whether a year is a leap year.
-8. Accept a username and password and check whether both match predefined values.
-9. Check whether a number is divisible by both 3 and 5.
-10. Use a nested `if` statement to check age eligibility and whether the person has an ID card.
+## Level 1: Easy (5 Questions)
 
-### Q2. Predict the Output
+### Q1. Simple `if-else`
 
-Write the output without running the programs.
-
-**1.**
 ```python
-x = 8
+x = 5
 
-if x > 5:
-    print("A")
+if x > 3:
+    print("Yes")
 else:
-    print("B")
+    print("No")
 ```
 
-**2.**
+### Q2. `for` Loop
+
 ```python
 for i in range(1, 5):
     print(i)
 ```
 
-**3.**
-```python
-for i in range(2, 11, 2):
-    print(i)
-```
+### Q3. `while` Loop
 
-**4.**
 ```python
 i = 1
 
 while i <= 3:
     print(i)
-    i += 1
+    i = i + 1
 ```
 
-**5.**
+### Q4. Even or Odd
+
 ```python
-for i in range(1, 6):
-    if i == 3:
+num = 8
+
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+### Q5. Adding Numbers
+
+```python
+total = 0
+
+for i in range(1, 4):
+    total = total + i
+
+print(total)
+```
+
+---
+
+## Level 2: Medium (5 Questions)
+
+### Q6. `if-elif-else`
+
+```python
+marks = 75
+
+if marks >= 90:
+    print("A")
+elif marks >= 60:
+    print("B")
+else:
+    print("C")
+```
+
+### Q7. `range()` with a Step
+
+```python
+for i in range(2, 11, 3):
+    print(i)
+```
+
+### Q8. Updating a Variable
+
+```python
+x = 2
+
+for i in range(3):
+    x = x + 2
+
+print(x)
+```
+
+### Q9. `while` Loop with a Condition
+
+```python
+i = 2
+
+while i < 10:
+    print(i)
+    i = i + 3
+```
+
+### Q10. Nested `if`
+
+```python
+age = 20
+has_id = False
+
+if age >= 18:
+    if has_id:
+        print("Allowed")
+    else:
+        print("ID required")
+else:
+    print("Not allowed")
+```
+
+---
+
+## Level 3: Hard (5 Questions)
+
+### Q11. `break` Statement
+
+```python
+for i in range(1, 8):
+    if i == 5:
         break
     print(i)
 ```
 
-**6.**
+### Q12. `continue` Statement
+
 ```python
 for i in range(1, 6):
     if i == 3:
@@ -67,58 +142,92 @@ for i in range(1, 6):
     print(i)
 ```
 
-### Q3. For Loop Practice
+### Q13. `while` Loop with `if`
 
-Write programs to:
+```python
+i = 0
+total = 0
 
-1. Print numbers from 1 to 20.
-2. Print numbers from 20 to 1.
-3. Print all even numbers from 1 to 50.
-4. Print all odd numbers from 1 to 30.
-5. Display the multiplication table of a number entered by the user.
-6. Calculate the sum of numbers from 1 to 100.
-7. Calculate the factorial of a positive integer.
-8. Count how many numbers from 1 to 100 are divisible by 7.
+while i < 8:
+    if i % 2 == 0:
+        total = total + i
+    i = i + 2
 
-### Q4. While Loop Practice
+print(total)
+```
 
-Write programs to:
+### Q14. Nested Loops
 
-1. Print numbers from 1 to 10 using a `while` loop.
-2. Print numbers from 10 to 1.
-3. Calculate the sum of the first `n` natural numbers.
-4. Keep asking the user to enter a number until they enter 0.
-5. Count the number of digits in a positive integer.
-6. Reverse the digits of a positive integer.
+```python
+for i in range(1, 4):
+    for j in range(1, 3):
+        print(i, j)
+```
 
-### Q5. Understand Loop Control
+### Q15. Combined Conditions and Loops
 
-1. Explain the difference between `break` and `continue`.
-2. What is the purpose of the `pass` statement?
-3. Write a program that stops printing when the loop reaches 6.
-4. Write a program that prints numbers from 1 to 10 but skips 5.
-5. Explain what an infinite loop is and how it can occur.
+```python
+total = 0
 
-### Q6. Challenge Questions
+for i in range(1, 6):
+    if i % 2 != 0:
+        total = total + i
+    else:
+        total = total - 1
 
-1. Print this pattern using nested loops:
-   ```text
-   *
-   * *
-   * * *
-   * * * *
-   * * * * *
-   ```
+print(total)
+```
 
-2. Print all numbers between 1 and 100 that are divisible by both 3 and 5.
+---
+```python
+# Day 05 - Python Practice Questions
+# Class XI | Spyder 3
+# Solve each question independently.
 
-3. Create a number-guessing program that keeps asking the user to guess a fixed number until they guess correctly.
+# ==========================================
+# PART A: CONDITIONAL STATEMENTS (3 QUESTIONS)
+# ==========================================
 
-4. Create a simple menu-driven calculator that performs addition, subtraction, multiplication, or division based on the user's choice.
+# Q1. Even or Odd
+# Accept an integer from the user.
+# Check whether the number is even or odd.
+# Display an appropriate message.
 
-### Instructions
 
-- Write each program in a Python file.
-- Predict the output before executing each program.
-- Use proper indentation.
-- For loop questions, identify the starting value, stopping condition, and update where applicable.
+# Q2. Greatest of Three Numbers
+# Accept three numbers from the user.
+# Use if-elif-else to find and display
+# the greatest number.
+
+
+# Q3. Grade Calculator
+# Accept marks out of 100.
+# Display the grade according to these rules:
+# 90 and above  -> Grade A
+# 75 to 89      -> Grade B
+# 50 to 74      -> Grade C
+# Below 50      -> Grade D
+# Also display "Invalid marks" if marks are
+# below 0 or above 100.
+
+
+# ==========================================
+# PART B: LOOPS (3 QUESTIONS)
+# ==========================================
+
+# Q4. Print Numbers
+# Use a for loop to print numbers from 1 to 20.
+
+
+# Q5. Multiplication Table
+# Accept a number from the user.
+# Use a for loop to print its multiplication
+# table from 1 to 10.
+
+
+# Q6. Sum of Natural Numbers
+# Accept a positive integer n from the user.
+# Use a while loop to calculate and display
+# the sum of numbers from 1 to n.
+```
+
