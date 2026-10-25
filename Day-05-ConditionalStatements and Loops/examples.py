@@ -116,11 +116,4 @@ for i in range(1, 4):
     print(i)
 
 
-# PART E: NESTED LOOPS
 
-# Example 14: Print a small pattern
-for i in range(3):
-    for j in range(2):
-        print("*", end=" ")
-    print()
-```
